@@ -1,7 +1,7 @@
 import pygame
 
 
-def handle_keys(vel):
+def handle_keys():
     events_dict = {'keep_running': True,
                    'x': 0,
                    'y': 0,
@@ -17,12 +17,8 @@ def handle_keys(vel):
 
     keys = pygame.key.get_pressed()
     if keys[pygame.K_LEFT]:
-        events_dict['x'] = -vel
+        events_dict['x'] = -1
     if keys[pygame.K_RIGHT]:
-        events_dict['x'] = vel
-    # if keys[pygame.K_UP]:
-    #     events_dict['y'] = -vel
-    # if keys[pygame.K_DOWN]:
-    #     events_dict['y'] = vel
+        events_dict['x'] = 1
 
     return events_dict
